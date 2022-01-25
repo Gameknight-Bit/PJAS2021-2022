@@ -1,11 +1,14 @@
 ### Constants ###
 key = 'hello world'
-
 #################
 
 ### Helper Functions ###
 def hexToBinary(hexNum):
     return padBinary("{0:08b}".format(int(hexNum, 16)))
+
+def binaryToHex(b):
+    dec = int(b, 2)
+    return str(hex(dec))[2:]
 
 ##### BINARY MUTATOR FUNCTIONS #####
 def padBinary(b):
@@ -125,8 +128,6 @@ def hash(k): #Main Hashing Algorithm
                   0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
                   0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208,
                   0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2]
-
-    print(len(kConstants))
     
     ###### Preprocessesing ######
     binaryKey = ''.join(format(ord(i), '08b') for i in k) #could also use bytearray
@@ -143,7 +144,6 @@ def hash(k): #Main Hashing Algorithm
     else:
         binaryKey += binLen
 
-    #print(binaryKey)
     #Done with main processing    
 
     mSchedule = []
@@ -161,7 +161,7 @@ def hash(k): #Main Hashing Algorithm
         t1 = xor(xor(rightrotate(mSchedule[i-15], 7), rightrotate(mSchedule[i-15], 18)), rightshift(mSchedule[i-15], 3))
         t2 = xor(xor(rightrotate(mSchedule[i-2], 17), rightrotate(mSchedule[i-2], 19)), rightshift(mSchedule[i-2], 10))
 
-        mSchedule[i] = add(add(add(mSchedule[i-16], t1), mSchedule[i-7]), t2)
+        mSchedule[i] = padBinary32(add(add(add(mSchedule[i-16], t1), mSchedule[i-7]), t2))
         i += 1 #counter
     #################################
 
@@ -191,16 +191,19 @@ def hash(k): #Main Hashing Algorithm
         c=b
         b=a
         a=padBinary32(add(temp1, temp2))
-        print("recompressing for nth: "+str(x))
+    
+    hash0 = binaryToHex(padBinary32(add(hexToBinary(hash0), a)))
+    hash1 = binaryToHex(padBinary32(add(hexToBinary(hash1), b)))
+    hash2 = binaryToHex(padBinary32(add(hexToBinary(hash2), c)))
+    hash3 = binaryToHex(padBinary32(add(hexToBinary(hash3), d)))
+    hash4 = binaryToHex(padBinary32(add(hexToBinary(hash4), e)))
+    hash5 = binaryToHex(padBinary32(add(hexToBinary(hash5), f)))
+    hash6 = binaryToHex(padBinary32(add(hexToBinary(hash6), g)))
+    hash7 = binaryToHex(padBinary32(add(hexToBinary(hash7), h)))
 
-    print(a)
-    print(b)
-    print(c)
-    print(d)
-    print(e)
-    print(f)
-    print(g)
-    print(h)
+    return (hash0+hash1+hash2+hash3+hash4+hash5+hash6+hash7)
 
 #hash(key)
+import hashlib
+
 print(hash(key))
