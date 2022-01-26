@@ -1,7 +1,7 @@
 import math
 
 ### Constants ###
-key = 'Hello My Name Is JACE'
+key = 'Hello World'
 #################
 
 ### Helper Functions ###
