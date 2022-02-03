@@ -1,0 +1,65 @@
+---- These are the Results!!! ----
+
+------------------
+Custom Hash Hashing 'pja'
+62125 Iterations
+Runtime: 2955.3616268634796 seconds
+Hash: 0cd5057a1cc89f9973cfbd78cf3930f64b5b477ac0f20223adc52fac93320177
+Password: pja
+------------------
+
+------------------
+Custom Hash Hashing 'pjas'
+288021 Iterations
+Runtime: 13532.014951467514 seconds
+Hash: a521d2b1e7156e48698ae653374efd90e6244171f1e60f9f4ecc401c981b6723
+Password: pjas
+------------------
+
+------------------
+MD5 Hashing '1sD5q'
+787792911 Iterations
+Runtime: 13322.585100650787 seconds
+Hash: cf758f0f088df929e8e5d613b13f12e0
+Password: 1sD5q
+------------------
+
+------------------
+MD5 Hashing '1sD5q'
+787792911 Iterations
+Runtime: 13297.659891843796 seconds
+Hash: cf758f0f088df929e8e5d613b13f12e0
+Password: 1sD5q
+------------------
+
+------------------
+MD5 Hashing '1sD5q'
+787792911 Iterations
+Runtime: 13288.352396726608 seconds
+Hash: cf758f0f088df929e8e5d613b13f12e0
+Password: 1sD5q
+------------------
+
+------------------
+MD5 Hashing '1sD5q'
+787792911 Iterations
+Runtime: 13286.79169011116 seconds
+Hash: cf758f0f088df929e8e5d613b13f12e0
+Password: 1sD5q
+------------------
+
+------------------
+SHA224 Hashing '1sD5q'
+787792911 Iterations
+Runtime: 13785.630823850632 seconds
+Hash: 5684d635e5e613feaf645e0f2cff028d8db6bbbe498f7b23b42f9f84
+Password: 1sD5q
+------------------
+
+------------------
+SHA256 Hashing '1sD5q'
+787792911 Iterations
+Runtime: 13643.378806114197 seconds
+Hash: a24cee2c3224416cbfb44d6de174f8d02cfa8d5fd5828353aef4f6ea598a1e5a
+Password: 1sD5q
+------------------
