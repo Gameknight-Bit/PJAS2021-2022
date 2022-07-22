@@ -6,4 +6,4 @@ Hashing Algorithm thing for PJAS for computer science 2021-2022. Its written alr
 ### Awards:
 Presented at Slippery Rock Campus in Feburary 2022: <b>1st Place (w/ Special Award)</b>
 
-Presented at Penn State in May 2022: <b>n/a</b>
+Presented at Penn State in May 2022: <b>1st Place</b>
